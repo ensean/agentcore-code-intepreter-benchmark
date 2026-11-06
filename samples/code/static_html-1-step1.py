@@ -1,0 +1,341 @@
+# case: static_html  step 1  exitCode=0  executionTime=0.07s
+
+html = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CloudNote — Your notes, everywhere</title>
+<meta name="description" content="CloudNote is the fast, secure, collaborative note-taking app that syncs across all your devices.">
+<style>
+:root{--brand:#4f46e5;--brand-2:#06b6d4;--ink:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#fff;--line:#e2e8f0;--radius:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:10}
+header.nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:64px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem}
+.nav ul{display:flex;gap:1.5rem;list-style:none}
+.nav ul a{color:var(--muted);font-weight:500}.nav ul a:hover{color:var(--brand)}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;border:2px solid transparent;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(79,70,229,.3)}
+.btn-primary:hover{background:#4338ca}
+.btn-ghost{border-color:var(--line);background:#fff}
+.btn-sm{padding:.5rem 1rem;font-size:.9rem}
+.hero{padding:6rem 0 5rem;background:radial-gradient(1200px 500px at 80% -10%,rgba(6,182,212,.18),transparent),radial-gradient(900px 500px at 0% 0%,rgba(79,70,229,.15),transparent)}
+.hero .container{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:#eef2ff;color:var(--brand);font-weight:600;font-size:.85rem;margin-bottom:1rem}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:var(--muted);margin:1.25rem 0 2rem;max-width:34rem}
+.cta{display:flex;gap:1rem;flex-wrap:wrap}
+.trust{margin-top:1.5rem;color:var(--muted);font-size:.9rem}
+.mock{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 30px 60px rgba(15,23,42,.12);overflow:hidden}
+.mock-bar{display:flex;gap:6px;padding:.75rem 1rem;border-bottom:1px solid var(--line);background:#f1f5f9}
+.mock-bar i{width:12px;height:12px;border-radius:50%;background:#cbd5e1;display:block}
+.mock-bar i:nth-child(1){background:#f87171}.mock-bar i:nth-child(2){background:#fbbf24}.mock-bar i:nth-child(3){background:#34d399}
+.mock-body{display:grid;grid-template-columns:120px 1fr;min-height:260px}
+.mock-side{border-right:1px solid var(--line);padding:1rem;display:grid;gap:.6rem;align-content:start}
+.mock-side b,.line{display:block;height:10px;border-radius:6px;background:#e2e8f0}
+.mock-side b:first-child{background:var(--brand);opacity:.6}
+.mock-main{padding:1.25rem;display:grid;gap:.7rem;align-content:start}
+.line.h{height:18px;width:60%;background:#c7d2fe}.line.w80{width:80%}.line.w60{width:60%}.line.w90{width:90%}
+.chk{display:flex;gap:.5rem;align-items:center}.chk i{width:14px;height:14px;border-radius:4px;border:2px solid var(--brand-2);display:block}
+section{padding:5rem 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.01em}
+.section-head p{color:var(--muted);margin-top:.75rem}
+.grid{display:grid;gap:1.5rem}
+.features .grid{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.75rem;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 16px 40px rgba(15,23,42,.08);transform:translateY(-3px)}
+.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#eef2ff,#cffafe);margin-bottom:1rem}
+.icon svg{width:24px;height:24px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card p{color:var(--muted)}
+.pricing{background:#fff;border-block:1px solid var(--line)}
+.pricing .grid{grid-template-columns:repeat(3,1fr);align-items:stretch}
+.plan{display:flex;flex-direction:column;position:relative}
+.plan.popular{border:2px solid var(--brand);box-shadow:0 20px 50px rgba(79,70,229,.15)}
+.ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:.8rem;font-weight:700;padding:.25rem .9rem;border-radius:999px;white-space:nowrap}
+.price{font-size:2.6rem;font-weight:800;margin:.5rem 0}.price small{font-size:1rem;color:var(--muted);font-weight:500}
+.plan ul{list-style:none;margin:1.25rem 0 2rem;display:grid;gap:.6rem;flex:1}
+.plan li{padding-left:1.6rem;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:8px;border-left:2px solid var(--brand-2);border-bottom:2px solid var(--brand-2);transform:rotate(-45deg)}
+.plan .btn{text-align:center}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:1rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.4rem}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--brand);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:.75rem}
+.cta-band{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-radius:24px;padding:3rem;text-align:center}
+.cta-band p{opacity:.9;margin:.75rem 0 1.5rem}
+.cta-band .btn{background:#fff;color:var(--brand)}
+footer{background:var(--ink);color:#cbd5e1;padding:4rem 0 2rem}
+.foot{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem}
+footer h4{color:#fff;margin-bottom:.9rem;font-size:.95rem}
+footer ul{list-style:none;display:grid;gap:.5rem}
+footer a:hover{color:#fff}
+footer .logo{color:#fff;margin-bottom:.75rem}
+.copy{border-top:1px solid #1e293b;margin-top:3rem;padding-top:1.5rem;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px}
+@media (max-width:960px){
+  .hero .container{grid-template-columns:1fr}
+  .features .grid{grid-template-columns:repeat(2,1fr)}
+  .pricing .grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto;gap:2rem}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav ul{display:none}
+  .hero{padding:4rem 0 3rem}
+  section{padding:3.5rem 0}
+  .features .grid,.foot{grid-template-columns:1fr}
+  .mock-body{grid-template-columns:1fr}.mock-side{display:none}
+  .cta-band{padding:2rem 1.25rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container">
+    <a href="#" class="logo" aria-label="CloudNote home">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.5-9.98A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z" fill="#4f46e5"/><path d="M9 13h6M9 15.5h4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+      CloudNote
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="#pricing" class="btn btn-primary btn-sm">Get started</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div>
+      <span class="badge">New: AI summaries are here</span>
+      <h1 id="hero-title">Your ideas, <span>synced everywhere</span>.</h1>
+      <p class="lead">CloudNote is the fast, secure note-taking workspace that keeps your thoughts organized and in sync across every device, for you and your team.</p>
+      <div class="cta">
+        <a href="#pricing" class="btn btn-primary">Start free trial</a>
+        <a href="#features" class="btn btn-ghost">See features</a>
+      </div>
+      <p class="trust">No credit card required &middot; Trusted by 40,000+ teams</p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><i></i><i></i><i></i></div>
+      <div class="mock-body">
+        <div class="mock-side"><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="mock-main">
+          <span class="line h"></span>
+          <span class="line w90"></span>
+          <span class="line w80"></span>
+          <span class="line w60"></span>
+          <div class="chk"><i></i><span class="line w60" style="flex:1"></span></div>
+          <div class="chk"><i></i><span class="line w80" style="flex:1"></span></div>
+          <div class="chk"><i></i><span class="line w60" style="flex:1"></span></div>
+          <span class="line w90"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features" aria-labelledby="features-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="features-title">Everything you need to think clearly</h2>
+      <p>Powerful features wrapped in a calm, distraction-free interface.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2M3 12a9 9 0 0 1 15.5-6.2"/><path d="M21 4v5h-5M3 20v-5h5"/></svg></div>
+        <h3>Real-time sync</h3>
+        <p>Edits appear instantly on your phone, tablet and desktop, even after working offline.</p>
+      </article>
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <h3>End-to-end encryption</h3>
+        <p>Your notes are encrypted on your device. Not even we can read them.</p>
+      </article>
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4 4 0 0 1 7-2.6"/></svg></div>
+        <h3>Team collaboration</h3>
+        <p>Share notebooks, mention teammates and co-edit with live cursors.</p>
+      </article>
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Instant search</h3>
+        <p>Find anything in milliseconds, including text inside images and PDFs.</p>
+      </article>
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+        <h3>AI summaries</h3>
+        <p>Turn long meeting notes into crisp summaries and action items with one click.</p>
+      </article>
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6"/><path d="M17 15l3 3-3 3"/></svg></div>
+        <h3>Templates &amp; workflows</h3>
+        <p>Start fast with 100+ templates for meetings, journals, projects and more.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing" aria-labelledby="pricing-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="pricing-title">Simple, transparent pricing</h2>
+      <p>Start free. Upgrade when you need more. Cancel anytime.</p>
+    </div>
+    <div class="grid">
+      <article class="card plan">
+        <h3>Starter</h3>
+        <p>For personal notes and getting started.</p>
+        <div class="price">$0<small>/month</small></div>
+        <ul>
+          <li>Up to 2 devices</li>
+          <li>500 MB storage</li>
+          <li>Basic search</li>
+          <li>Community support</li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Get started</a>
+      </article>
+      <article class="card plan popular">
+        <span class="ribbon">Most popular</span>
+        <h3>Pro</h3>
+        <p>For power users who live in their notes.</p>
+        <div class="price">$8<small>/month</small></div>
+        <ul>
+          <li>Unlimited devices</li>
+          <li>50 GB storage</li>
+          <li>AI summaries</li>
+          <li>Offline mode &amp; version history</li>
+          <li>Priority email support</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Start 14-day trial</a>
+      </article>
+      <article class="card plan">
+        <h3>Team</h3>
+        <p>For teams that collaborate and share.</p>
+        <div class="price">$15<small>/user/mo</small></div>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Shared workspaces</li>
+          <li>Admin controls &amp; SSO</li>
+          <li>Audit logs</li>
+          <li>Dedicated success manager</li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Contact sales</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <p>Can&rsquo;t find what you&rsquo;re looking for? Email support@cloudnote.example.</p>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Is there really a free plan?</summary>
+        <p>Yes. The Starter plan is free forever with no credit card required. Upgrade only when you need more storage or features.</p>
+      </details>
+      <details>
+        <summary>Can I use CloudNote offline?</summary>
+        <p>Absolutely. Pro and Team plans include full offline mode; your changes sync automatically when you reconnect.</p>
+      </details>
+      <details>
+        <summary>How secure is my data?</summary>
+        <p>Notes are end-to-end encrypted with AES-256 and stored in SOC 2 Type II certified data centers. Only you hold the keys.</p>
+      </details>
+      <details>
+        <summary>Can I import notes from other apps?</summary>
+        <p>Yes. Import from Markdown, plain text, HTML and popular note apps in a few clicks.</p>
+      </details>
+      <details>
+        <summary>Can I cancel anytime?</summary>
+        <p>Yes. Cancel from your account settings at any time. You keep access until the end of your billing period and can export everything.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Call to action" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Ready to clear your mind?</h2>
+      <p>Join 40,000+ teams who think better with CloudNote.</p>
+      <a href="#pricing" class="btn">Start your free trial</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <div class="logo">CloudNote</div>
+        <p>Your ideas, synced everywhere. Built for focus, designed for teams.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#">Changelog</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul><li><a href="#faq">FAQ</a></li><li><a href="#">Help center</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2025 CloudNote Inc. All rights reserved. (Fictional product.)</span>
+      <span><a href="#">Privacy</a> &middot; <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+'''
+with open("index.html","w",encoding="utf-8") as f: f.write(html)
+
+from html.parser import HTMLParser
+VOID={"area","base","br","col","embed","hr","img","input","link","meta","source","track","wbr","path","rect","circle"}
+class V(HTMLParser):
+    def __init__(s):
+        super().__init__(); s.stack=[]; s.errors=[]; s.tags=0; s.ext=[]
+    def handle_starttag(s,t,a):
+        s.tags+=1
+        d=dict(a)
+        for k in("src","href"):
+            v=d.get(k) or ""
+            if v.startswith(("http","//")): s.ext.append(v)
+        if t not in VOID: s.stack.append((t,s.getpos()))
+    def handle_startendtag(s,t,a): s.tags+=1
+    def handle_endtag(s,t):
+        if t in VOID: return
+        if not s.stack or s.stack[-1][0]!=t:
+            s.errors.append(f"mismatch </{t}> at {s.getpos()}, open={s.stack[-1] if s.stack else None}")
+        else: s.stack.pop()
+p=V(); p.feed(open("index.html",encoding="utf-8").read()); p.close()
+print("tags:",p.tags,"errors:",p.errors,"unclosed:",p.stack,"external:",p.ext)
+import re
+print("features:",html.count('<article class="card">')-2, "plans:",html.count("card plan"),"faq:",html.count("<details"),"bytes:",len(html.encode()))

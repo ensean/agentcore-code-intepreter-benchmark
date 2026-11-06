@@ -1,0 +1,15 @@
+{"idx":1,"create_s":0.7,"first_exec_s":0.064,"time_to_first_result_s":0.764,"warm_exec_s":0.064,"import_first_s":0.764,"import_again_s":0.65,"import_inprocess_s":0.522,"delete_s":0.175}
+{"idx":2,"create_s":0.687,"first_exec_s":0.063,"time_to_first_result_s":0.75,"warm_exec_s":0.068,"import_first_s":0.769,"import_again_s":0.662,"import_inprocess_s":0.523,"delete_s":0.183}
+{"idx":3,"create_s":1.065,"first_exec_s":0.053,"time_to_first_result_s":1.118,"warm_exec_s":0.053,"import_first_s":0.769,"import_again_s":0.652,"import_inprocess_s":0.522,"delete_s":0.188}
+{"idx":4,"create_s":0.706,"first_exec_s":0.06,"time_to_first_result_s":0.767,"warm_exec_s":0.075,"import_first_s":0.757,"import_again_s":0.652,"import_inprocess_s":0.52,"delete_s":0.187}
+{"idx":5,"create_s":0.697,"first_exec_s":0.058,"time_to_first_result_s":0.755,"warm_exec_s":0.076,"import_first_s":0.765,"import_again_s":0.652,"import_inprocess_s":0.52,"delete_s":0.181}
+{"idx":6,"create_s":1.068,"first_exec_s":0.053,"time_to_first_result_s":1.121,"warm_exec_s":0.051,"import_first_s":0.763,"import_again_s":0.65,"import_inprocess_s":0.52,"delete_s":0.182}
+{"idx":7,"create_s":0.693,"first_exec_s":0.06,"time_to_first_result_s":0.753,"warm_exec_s":0.076,"import_first_s":0.763,"import_again_s":0.652,"import_inprocess_s":0.521,"delete_s":0.187}
+{"idx":8,"create_s":0.691,"first_exec_s":0.055,"time_to_first_result_s":0.747,"warm_exec_s":0.079,"import_first_s":0.76,"import_again_s":0.656,"import_inprocess_s":0.525,"delete_s":0.178}
+{"idx":9,"create_s":0.693,"first_exec_s":0.066,"time_to_first_result_s":0.759,"warm_exec_s":0.061,"import_first_s":0.771,"import_again_s":0.659,"import_inprocess_s":0.522,"delete_s":0.183}
+{"idx":10,"create_s":0.705,"first_exec_s":0.057,"time_to_first_result_s":0.763,"warm_exec_s":0.075,"import_first_s":0.761,"import_again_s":0.658,"import_inprocess_s":0.523,"delete_s":0.183}
+{"idx":11,"create_s":0.679,"first_exec_s":0.057,"time_to_first_result_s":0.736,"warm_exec_s":0.076,"import_first_s":0.766,"import_again_s":0.659,"import_inprocess_s":0.525,"delete_s":0.185}
+{"idx":12,"create_s":0.693,"first_exec_s":0.058,"time_to_first_result_s":0.751,"warm_exec_s":0.071,"import_first_s":0.759,"import_again_s":0.659,"import_inprocess_s":0.52,"delete_s":0.179}
+{"idx":13,"create_s":0.727,"first_exec_s":0.055,"time_to_first_result_s":0.783,"warm_exec_s":0.076,"import_first_s":0.764,"import_again_s":0.655,"import_inprocess_s":0.522,"delete_s":0.195}
+{"idx":14,"create_s":1.066,"first_exec_s":0.052,"time_to_first_result_s":1.119,"warm_exec_s":0.051,"import_first_s":0.764,"import_again_s":0.657,"import_inprocess_s":0.523,"delete_s":0.19}
+{"idx":15,"create_s":0.696,"first_exec_s":0.073,"time_to_first_result_s":0.769,"warm_exec_s":0.063,"import_first_s":0.764,"import_again_s":0.662,"import_inprocess_s":0.527,"delete_s":0.18}

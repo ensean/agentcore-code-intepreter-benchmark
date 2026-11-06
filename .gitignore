@@ -1,0 +1,36 @@
+# --- secrets / credentials (never commit) ---
+*.pem
+*.key
+*.pub
+*.p12
+.env
+.env.*
+.aws/
+credentials
+*secret*
+*token*.json
+
+# --- raw AWS exports: contain account ID, resource ARNs, request IDs ---
+# regenerate with bench/export_usage_logs.sh
+results/usage_logs*.json
+results/*_raw*.json
+
+# --- Lark/Feishu authoring workspace (doc drafts, fetched doc content, tenant IDs) ---
+draft_*_folder/
+
+# --- bulky generated artifacts (one sample per use case is kept under samples/) ---
+results/artifacts/
+
+# --- python / tooling ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
